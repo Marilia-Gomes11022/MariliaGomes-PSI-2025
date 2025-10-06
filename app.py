@@ -34,7 +34,7 @@ def semestre(x):
     y = x + 1
     return render_template('semestre.html', x = x, y = y)
 
-@app.route('soma/<int:n1>/<int:n2>')
+@app.route('/soma/<int:n1>/<int:n2>')
 def soma(n1, n2):
     return str(n1+n2)
 
