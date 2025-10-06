@@ -15,11 +15,6 @@ def contato():
 # return render_template('contato.html', nome='Maria')
 #'<h1> sabe se la o que </h1>'
 
-@app.route('/perfil', defaults={'nome':'fulano'})
-
-@app.route('/perfil/<nome>')
-def perfil(nome):
-    return render_template('perfil.html', nome = nome)
 
 @app.route('/exemplo')
 def exemplo():
@@ -38,6 +33,10 @@ def semestre(x):
 def soma(n1, n2):
     return str(n1+n2)
 
+@app.route('/perfil', defaults={'nome':'fulano'})
+@app.route('/perfil/<nome>')
+def perfil(nome):
+    return render_template('perfil.html', nome=nome)
 
 #isto tem que ser a >>ÚLTIMA<< coisa do código
 if __name__ == '__main__':

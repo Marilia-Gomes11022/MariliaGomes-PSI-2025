@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>22/09/2025</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/estilo.css')}}">
 </head>
 <body>
+    <img src="{{url_for('static', filename='imgs/comunicacao.png')}}" onclick="exibirAlerta()">
     <h2>Nome: {{nome}}</h2>
     <h3>E-mail: alba.lopes@ifrn.edu.br</h3>
-    <img src="{{url_for('static', filename='comunicacao.png')}}">
+
+    <script src="{{url_for('static', filename='js/funcoes.js')}}"></script>
 </body>
 </html>
